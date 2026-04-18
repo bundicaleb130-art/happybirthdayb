@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday! 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════ CONFETTI CANVAS ═══════════════ -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ═══════════════ FLOATING EMOJIS ═══════════════ -->
+  <div id="floaters" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       PAGE 1 — LOGIN
+  ═══════════════════════════════════════════════ -->
+  <div id="page-login" class="page active">
+    <div class="login-card">
+      <div class="cake-wrapper" aria-hidden="true">
+        <div class="cake">
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+          <div class="cake-top"></div>
+          <div class="cake-bottom"></div>
+          <div class="drip d1"></div>
+          <div class="drip d2"></div>
+          <div class="drip d3"></div>
+        </div>
+      </div>
+
+      <h1 class="login-title">Happy Birthday<br/>from yours truly Caleb!</h1>
+      <p class="login-sub">Type BECKY to unwrap it ✨</p>
+
+      <div class="input-wrap">
+        <input
+          id="name-input"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Your name…"
+          maxlength="30"
+        />
+        <label for="name-input" class="sr-only">Your name</label>
+      </div>
+
+      <button id="enter-btn" class="btn-primary" disabled>
+        <span class="btn-text">Open my surprise 🎁</span>
+        <span class="btn-shimmer"></span>
+      </button>
+
+      <p class="hint">Press Enter or click the button</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       PAGE 2 — GALLERY
+  ═══════════════════════════════════════════════ -->
+  <div id="page-gallery" class="page">
+
+    <!-- Header -->
+    <header class="gallery-header">
+      <div class="header-stars" aria-hidden="true"></div>
+      <h2 class="gallery-title">Happy Birthday, <span id="name-display"></span>! 🎉</h2>
+      <p class="gallery-sub">A little celebration, just for you</p>
+    </header>
+
+    <!-- ── Photo Gallery ── -->
+    <section class="section" id="photos-section">
+      <h3 class="section-label">📸 Your beautiful moments</h3>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!--
+          ┌─────────────────────────────────────────────────────────────────┐
+          │  HOW TO ADD YOUR PHOTOS                                         │
+          │                                                                 │
+          │  Replace each src="photos/photo1.jpg" with the real paths to    │
+          │  the birthday person's photos. You can use:                     │
+          │   • Relative paths:  photos/image.jpg                          │
+          │   • Absolute paths:  /home/user/pictures/image.png             │
+          │   • Online URLs:     https://example.com/image.jpg             │
+          │                                                                 │
+          │  Add or remove <div class="photo-card"> blocks as needed.      │
+          └─────────────────────────────────────────────────────────────────┘
+        -->
+        <div class="photo-card" style="--i:0">
+          <img src="photos/photo1.png" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>💛</span></div>
+        </div>
+        <div class="photo-card" style="--i:1">
+          <img src="photos/photo2.png" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🌟</span></div>
+        </div>
+        <div class="photo-card" style="--i:2">
+          <img src="photos/photo3.png" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🎈</span></div>
+        </div>
+        <div class="photo-card" style="--i:3">
+          <img src="photos/photo4.png" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>✨</span></div>
+        </div>
+        <div class="photo-card" style="--i:4">
+          <img src="photos/photo5.png" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🥳</span></div>
+        </div>
+        <div class="photo-card" style="--i:5">
+          <img src="photos/photo6.png" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>💫</span></div>
+        </div>
+        <div class="photo-card" style="--i:6">
+          <img src="photos/photo7.png" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🎂</span></div>
+        </div>
+        <div class="photo-card" style="--i:7">
+          <img src="photos/photo8.jpeg" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🌈</span></div>
+        </div>
+        <div class="photo-card wide" style="--i:8">
+          <img src="photos/photo9.jpeg" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>💖</span></div>
+        </div>
+        <div class="photo-card" style="--i:9">
+          <img src="photos/photo10.jpeg" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🎊</span></div>
+        </div>
+        <div class="photo-card" style="--i:10">
+          <img src="photos/photo11.jpeg" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🌸</span></div>
+        </div>
+        <div class="photo-card tall" style="--i:11">
+          <img src="photos/photo12.jpeg" alt="A beautiful memory" loading="lazy" />
+          <div class="photo-overlay"><span>🦋</span></div>
+        </div>
+      </div>
+    </section>
+
+  
+    </section>
+
+    <!-- ── Message ── -->
+    <section class="section message-section">
+      <div class="message-card">
+        <div class="message-icon">🎁</div>
+        <!--
+          Change the message below to a personal birthday message!
+        -->
+        <p class="message-text">
+          Wishing you a day as bright and joyful as you make every day for those around you.
+          Here's to another year of laughter, adventures, beautiful memories and me
+          <strong>Happy Birthday! welcome to ur sweet 17.</strong> 🥂
+        </p>
+        <div class="message-sig">— With love ❤️</div>
+      </div>
+    </section>
+
+    <footer class="site-footer">Made with 💛 especially for you , by CALEB </footer>
+
+  </div><!-- /page-gallery -->
+
+  <!-- ── Lightbox ── -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-label="Photo viewer" aria-modal="true">
+    <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+    <button class="lb-prev" id="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" id="lb-next" aria-label="Next">›</button>
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt="" />
+    </div>
+  </div>
+
+  <!--
+    ══════════════════════════════════════════════════
+    🎵 BACKGROUND MUSIC
+    ══════════════════════════════════════════════════
+    Replace  src="music/song.mp3"  with the path to
+    any MP3/OGG file you want to play.
+    You can also add a second <source> for .ogg fallback.
+    ══════════════════════════════════════════════════
+  -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="music/song.mp3" type="audio/mpeg" />
+    <source src="music/song.ogg" type="audio/ogg" />
+  </audio>
+
+  <!-- ── Floating Music Player ── -->
+  <div id="music-player" class="music-player hidden" aria-label="Music controls">
+    <div class="music-disc" id="music-disc">🎵</div>
+    <div class="music-info">
+      <span class="music-title" id="music-title">Birthday Song</span>
+      <div class="music-bar-wrap">
+        <div class="music-bar"><div class="music-bar-fill" id="music-bar-fill"></div></div>
+        <span class="music-time" id="music-time">0:00</span>
+      </div>
+    </div>
+    <button class="music-btn" id="music-toggle" aria-label="Pause music">⏸</button>
+    <button class="music-btn music-vol" id="music-mute" aria-label="Mute">🔊</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
